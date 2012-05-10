@@ -1,4 +1,14 @@
 VexWebsite::Application.routes.draw do
+  resources :applications
+
+  resources :events
+
+  resources :teams
+
+  resources :users
+
+  resources :schools
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

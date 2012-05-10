@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  win: 1
+  tie: 1
+  loss: 1
+  event: 
+  team: 
+
+two:
+  win: 1
+  tie: 1
+  loss: 1
+  event: 
+  team: 

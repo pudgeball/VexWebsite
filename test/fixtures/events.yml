@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  region: MyString
+  name: MyString
+  date: 2012-05-10
+  spotsAvailable: 1
+
+two:
+  region: MyString
+  name: MyString
+  date: 2012-05-10
+  spotsAvailable: 1

@@ -1,0 +1,29 @@
+<h1>Listing applications</h1>
+
+<table>
+  <tr>
+    <th>Teamname</th>
+    <th>Username</th>
+    <th>Useremail</th>
+    <th>Schoolname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @applications.each do |application| %>
+  <tr>
+    <td><%= application.teamName %></td>
+    <td><%= application.userName %></td>
+    <td><%= application.userEmail %></td>
+    <td><%= application.schoolName %></td>
+    <td><%= link_to 'Show', application %></td>
+    <td><%= link_to 'Edit', edit_application_path(application) %></td>
+    <td><%= link_to 'Destroy', application, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Application', new_application_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Teamname:</b>
+  <%= @application.teamName %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @application.userName %>
+</p>
+
+<p>
+  <b>Useremail:</b>
+  <%= @application.userEmail %>
+</p>
+
+<p>
+  <b>Schoolname:</b>
+  <%= @application.schoolName %>
+</p>
+
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>
