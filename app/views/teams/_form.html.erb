@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :school %><br />
-    <%= f.text_field :school %>
+    <%= f.select :school, School.all.collect { |s| [s.name] } %>
   </div>
   <div class="actions">
     <%= f.submit %>
