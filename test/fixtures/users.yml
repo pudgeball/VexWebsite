@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+UserOne:
   role: MyString
   email: MyString
   name: MyString
-  school: 
+  school: SchoolOne
 
-two:
+UserTwo:
   role: MyString
   email: MyString
   name: MyString
-  school: 
+  school: SchoolTwo

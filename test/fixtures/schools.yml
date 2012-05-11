@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+SchoolOne:
   region: MyString
   name: MyString
+  team: TeamOne
+  user: UserOne
 
-two:
+SchoolTwo:
   region: MyString
   name: MyString
+  team: TeamTwo
+  user: UserTwo

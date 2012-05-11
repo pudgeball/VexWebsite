@@ -1,9 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  team: 
-  event: 
+EventAOne:
+  id: 1
+  team_id: 1
+  event_id: 1
 
-two:
-  team: 
-  event: 
+EventATwo:
+  team: TeamOne
+  event: EventTwo

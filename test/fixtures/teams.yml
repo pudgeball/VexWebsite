@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+TeamOne:
+  id: 1
   name: MyString
   numStudents: 1
-  school: 
+  school: SchoolOne
+  eventattendee_id: 1
+  event_records: EventRecordOne
 
-two:
+TeamTwo:
   name: MyString
   numStudents: 1
-  school: 
+  school: SchoolTwo
+  event_attendees: EventATwo
+  event_records: EventRecordTwo
