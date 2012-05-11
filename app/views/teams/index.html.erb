@@ -14,7 +14,7 @@
   <tr>
     <td><%= team.name %></td>
     <td><%= team.numStudents %></td>
-    <td><%= team.school %></td>
+    <td><%= team.school.name %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>

@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :school %><br />
-    <%= f.select :school, School.all.collect { |s| [s.name] } %>
+	<%= select(:team, "school_id", School.all.collect { |s| [s.name, s.id] }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
