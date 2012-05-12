@@ -4,10 +4,5 @@ UserOne:
   role: MyString
   email: MyString
   name: MyString
-  school: SchoolOne
+  school_id: 1
 
-UserTwo:
-  role: MyString
-  email: MyString
-  name: MyString
-  school: SchoolTwo

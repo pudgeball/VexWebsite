@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="banner">
+    <%= image_tag "vexlogo.jpg", id: "logo" %>
+    <p id="title"><%= @page_title || "ZOMG WHAT UP" %></p>
+    <p id="logout">logout</p>
+  </div>
+  <div id="content">
+    <%= yield %>
+  </div>
 </body>
 </html>

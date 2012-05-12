@@ -5,9 +5,3 @@ ApplicationOne:
   userName: MyString
   userEmail: MyString
   schoolName: MyString
-
-ApplicationTwo:
-  teamName: MyString
-  userName: MyString
-  userEmail: MyString
-  schoolName: MyString

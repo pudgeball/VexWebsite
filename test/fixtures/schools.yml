@@ -1,13 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 SchoolOne:
+  id: 1
   region: MyString
   name: MyString
-  team: TeamOne
-  user: UserOne
-
-SchoolTwo:
-  region: MyString
-  name: MyString
-  team: TeamTwo
-  user: UserTwo

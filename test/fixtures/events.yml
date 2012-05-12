@@ -6,13 +6,3 @@ EventOne:
   name: MyString
   date: 2012-05-10
   spotsAvailable: 1
-  event_attendees: EventAOne
-  event_records: EventRecordOne, EventRecordTwo
-
-EventTwo:
-  region: MyString
-  name: MyString
-  date: 2012-05-10
-  spotsAvailable: 1
-  event_attendees: EventATwo
-  event_records:

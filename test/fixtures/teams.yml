@@ -4,13 +4,4 @@ TeamOne:
   id: 1
   name: MyString
   numStudents: 1
-  school: SchoolOne
-  eventattendee_id: 1
-  event_records: EventRecordOne
-
-TeamTwo:
-  name: MyString
-  numStudents: 1
-  school: SchoolTwo
-  event_attendees: EventATwo
-  event_records: EventRecordTwo
+  school_id: 1

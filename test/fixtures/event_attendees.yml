@@ -4,7 +4,5 @@ EventAOne:
   id: 1
   team_id: 1
   event_id: 1
-
-EventATwo:
-  team: TeamOne
-  event: EventTwo
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>

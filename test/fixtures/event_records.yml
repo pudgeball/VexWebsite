@@ -4,12 +4,5 @@ EventRecordOne:
   win: 1
   tie: 1
   loss: 1
-  event: EventOne
-  team: TeamOne
-
-EventRecordTwo:
-  win: 1
-  tie: 1
-  loss: 0
-  event: EventOne
-  team: TeamTwo
+  event_id: 1
+  team_id: 1

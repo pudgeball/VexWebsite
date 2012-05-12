@@ -1,4 +1,6 @@
 VexWebsite::Application.routes.draw do
+  get "page/index"
+
   resources :applications
 
   resources :events
@@ -8,6 +10,8 @@ VexWebsite::Application.routes.draw do
   resources :users
 
   resources :schools
+  
+  root to: "page#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
