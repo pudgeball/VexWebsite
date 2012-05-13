@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    
+    @page_title = "Users"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    
+    @page_title = "#{@user.name}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,8 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
+    
+    @page_title = "New User"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +41,8 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    
+    @page_title = "Update User"
   end
 
   # POST /users

@@ -3,6 +3,8 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.all
+    
+    @page_title = "Schools"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class SchoolsController < ApplicationController
   # GET /schools/1.json
   def show
     @school = School.find(params[:id])
+    
+    @page_title = "#{@school.name}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,8 @@ class SchoolsController < ApplicationController
   # GET /schools/new.json
   def new
     @school = School.new
+    
+    @page_title = "New School"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +41,8 @@ class SchoolsController < ApplicationController
   # GET /schools/1/edit
   def edit
     @school = School.find(params[:id])
+    
+    @page_title = "Edit School"
   end
 
   # POST /schools

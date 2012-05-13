@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    
+    @page_title = "Events"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
+    
+    @page_title = "Event - #{@event.name}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,8 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
+    
+    @page_title = "New Event"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +41,8 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
+    
+    @page_title = "Update Event"
   end
 
   # POST /events

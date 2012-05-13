@@ -1,17 +1,13 @@
 VexWebsite::Application.routes.draw do
   get "page/index"
+  get "page/admin"
 
-  resources :applications
-
-  resources :events
-
-  resources :teams
-
-  resources :users
-
-  resources :schools
+  resources :applications, :events, :teams, :users, :schools
   
   root to: "page#index"
+  
+  match 'admin' => 'page#admin'
+  match 'me' => 'page#user'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

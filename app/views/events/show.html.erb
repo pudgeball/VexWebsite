@@ -16,10 +16,13 @@
 </p>
 
 <p>
-  <b>Spotsavailable:</b>
+  <b>Spots Available:</b>
   <%= @event.spotsAvailable %>
 </p>
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+
+<% #@eventAttendees = EventAttendees.find(@event)%>
+<% #debug @event.spotsLeft %>

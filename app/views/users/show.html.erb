@@ -7,7 +7,7 @@
 
 <p>
   <b>Email:</b>
-  <%= @user.email %>
+  <%= mail_to @user.email %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <b>School:</b>
-  <%= @user.school.name %>
+  <%= link_to @user.school.name, school_path(@user.school) %>
 </p>
 
 

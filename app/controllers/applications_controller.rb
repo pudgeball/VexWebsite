@@ -3,6 +3,8 @@ class ApplicationsController < ApplicationController
   # GET /applications.json
   def index
     @applications = Application.all
+    
+    @page_title = "Pending Applications"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class ApplicationsController < ApplicationController
   # GET /applications/1.json
   def show
     @application = Application.find(params[:id])
+    
+    @page_title = "Application from #{@application.userName}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,8 @@ class ApplicationsController < ApplicationController
   # GET /applications/new.json
   def new
     @application = Application.new
+    
+    @page_title = "New Application"
 
     respond_to do |format|
       format.html # new.html.erb

@@ -3,6 +3,8 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     @teams = Team.all
+    
+    @oage_title = "Teams"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class TeamsController < ApplicationController
   # GET /teams/1.json
   def show
     @team = Team.find(params[:id])
+    
+    @page_title = "Team: #{@team.name}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,8 @@ class TeamsController < ApplicationController
   # GET /teams/new.json
   def new
     @team = Team.new
+    
+    @page_title = "New Team"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +41,8 @@ class TeamsController < ApplicationController
   # GET /teams/1/edit
   def edit
     @team = Team.find(params[:id])
+    
+    @page_title = "Update Team"
   end
 
   # POST /teams
