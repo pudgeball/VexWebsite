@@ -14,9 +14,9 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.role %></td>
-    <td><%= user.email %></td>
+    <td><%= mail_to user.email %></td>
     <td><%= user.name %></td>
-    <td><%= user.school.name %></td>
+    <td><%= link_to user.school.name, school_path(user.school) %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>

@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
                             less_than_or_equal_to: 36 }
   
   has_many :eventRecords
-  has_many :eventAttendees
+  has_many :event_attendees
   
   def spotsLeft
     @attendees = EventAttendees.find(self)

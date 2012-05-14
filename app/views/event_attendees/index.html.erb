@@ -1,0 +1,25 @@
+<h1>Listing <%= t("helpers.label.event_attendees.title").pluralize %></h1>
+
+<table>
+  <tr>
+    <th>Team</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @event_attendees.each do |attendee| %>
+  <tr>
+    <td><%= link_to attendee.team.name, team_path(attendee.team) %></td>
+    <td><%= link_to attendee.event.name, event_path(attendee.event) %></td>
+    <td><%= link_to 'Show', attendee %></td>
+    <td><%= link_to 'Edit', edit_event_attendee_path(attendee) %></td>
+    <td><%= link_to 'Destroy', attendee, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event attendee', new_event_attendee_path %>

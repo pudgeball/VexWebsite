@@ -2,11 +2,21 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    attributes:
+      team:
+          numStudents: "Number of Student"
+          
   helpers:
     label:
+      event_attendees:
+        title: "Event Attendee"
+        
       event:
+        title: "Event"
         spotsAvailable: "Spots Available"
         
       team:
+        title: "Team"
         name: "Team Name"
         numStudents: "Number of Students"

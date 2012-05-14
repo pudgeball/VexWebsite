@@ -1,0 +1,24 @@
+<%= form_for(@event_attendee) do |f| %>
+  <% if @event_attendee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_attendee.errors.count, "error") %> prohibited this event_attendee from being saved:</h2>
+      <ul>
+      <% @event_attendee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team %><br />
+    <%= select(:event_attendee, "team_id", Team.all.collect { |team| [team.name, team.id] } ) %>
+  </div>
+  <div class="field">
+    <%= f.label :event %><br />
+    <%= select(:event_attendee, "event_id", Event.all.collect { |event| [event.name, event.id] } )%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

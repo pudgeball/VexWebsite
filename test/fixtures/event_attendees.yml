@@ -1,8 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-EventAOne:
-  id: 1
-  team_id: 1
-  event_id: 1
-  created_at: <%= DateTime.now %>
-  updated_at: <%= DateTime.now %>
+one:
+  team: 
+  event: 
+
+two:
+  team: 
+  event: 
