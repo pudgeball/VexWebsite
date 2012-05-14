@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513161422) do
+ActiveRecord::Schema.define(:version => 20120514134143) do
 
   create_table "applications", :force => true do |t|
     t.string   "teamName"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120513161422) do
     t.integer  "school_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "password"
   end
 
   add_index "users", ["school_id"], :name => "index_users_on_school_id"
