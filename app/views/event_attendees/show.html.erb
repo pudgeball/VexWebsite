@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Team:</b>
+  <b><%= t("activerecord.attributes.event_attendees.team") %>:</b>
   <%= link_to @event_attendee.team.name, team_path(@event_attendee.team) %>
 </p>
 
 <p>
-  <b>Event:</b>
+  <b><%= t("activerecord.attributes.event_attendees.event") %>:</b>
   <%= link_to @event_attendee.event.name, event_path(@event_attendee.event) %>
 </p>
 

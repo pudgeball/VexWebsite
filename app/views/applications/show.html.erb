@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Team Name:</b>
+  <b><%= t("activerecord.attributes.application.teamName") %>:</b>
   <%= @application.teamName %>
 </p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t("activerecord.attributes.application.userName") %>:</b>
   <%= @application.userName %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= t("activerecord.attributes.application.userEmail") %>:</b>
   <%= mail_to @application.userEmail %>
 </p>
 
 <p>
-  <b>School Name:</b>
+  <b><%= t("activerecord.attributes.application.schoolName") %>:</b>
   <%= @application.schoolName %>
 </p>
 

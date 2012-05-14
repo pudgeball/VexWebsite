@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t("activerecord.attributes.team.name") %>:</b>
   <%= @team.name %>
 </p>
 
 <p>
-  <b><%= t("helpers.label.team.numStudents")%>:</b>
+  <b><%= t("activerecord.attributes.team.numStudents") %>:</b>
   <%= @team.numStudents %>
 </p>
 
 <p>
-  <b>School:</b>
+  <b><%= t("activerecord.attributes.team.school") %>:</b>
   <%= @team.school.name %>
 </p>
 

@@ -15,5 +15,8 @@
   <div id="content">
     <%= yield %>
   </div>
+  <div id="created">
+    <p>Created by <%= mail_to 'mikkel.harris@gmail.com', "Mikkel Harris" %> & <%= mail_to 'nick@nickmcguire.com', "Nick McGuire"%></p>
+  </div>
 </body>
 </html>

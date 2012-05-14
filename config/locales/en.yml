@@ -4,19 +4,31 @@
 en:
   activerecord:
     attributes:
-      team:
-          numStudents: "Number of Student"
-          
-  helpers:
-    label:
-      event_attendees:
-        title: "Event Attendee"
-        
+      application:
+        schoolName: "School Name"
+        teamName: "Team Name"
+        title: "Application"
+        userEmail: "Email"
+        userName: "Name"
       event:
-        title: "Event"
+        date: "Date"
+        name: "Name"
+        region: "Region"
         spotsAvailable: "Spots Available"
-        
+        title: "Event"
+      event_attendees:
+        event: "Event"
+        team: "Team"
+        title: "Event Attendee"
       team:
-        title: "Team"
+        event: "Event"
         name: "Team Name"
         numStudents: "Number of Students"
+        school: "School"
+        title: "Team"
+      school:
+        name: "Name"
+        region: "Region"
+        title: "School"
+        
+      
