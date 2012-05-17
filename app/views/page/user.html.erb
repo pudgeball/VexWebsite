@@ -1,17 +1,15 @@
 <h1>My Profile -  <%= link_to t("activerecord.attributes.school.title"), schools_path %></h1>
-<div>
-	<div style=" width:45%">
-		<div>My Teams</div>
-			<table>
-				<%= render :partial => "teams/team" %>
-			</table>
-		</div>
+<div style="width:95%;">
+	<div style="float:left; width:45%">
+		<h2>My Teams</h2>		
+		<ul>
+			<%= render :partial => "teams/team" %>
+		</ul>
 	</div>
 	<div style="float:right; width:45%">
-		<div>My Events</div>
-			<table>
-				<%= render :partial => "events/event" %>
-			</table>
-		</div>
+		<h2>My Events</h2>
+		<ul>
+			<%= render :partial => "events/event" %>
+		</ul>
 	</div>
 </div>
