@@ -24,4 +24,6 @@
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 
-<%= render(@event.event_attendees) %>
+<ul>
+	<%= render(@event.event_attendees) %>
+</ul>
