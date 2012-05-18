@@ -1,12 +1,15 @@
-<li>
-	<div id="cell">
-		<div id="top">
-        	<p><%= t("activerecord.attributes.team.name") %></p>
-      	</div>
-      	<div id="bottom">
-        	<div id="info">
-          		<p><%= t("activerecord.attributes.team.numStudents") %></p>
-        	</div>
-      	</div>
-	</div>
-</li>
+<table>
+  <tr>
+    <th><%= t("activerecord.attributes.team.name") %></th>
+    <th><%= t("activerecord.attributes.team.numStudents") %></th>
+    <th><%= t("activerecord.attributes.team.school") %></th>
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.name %></td>
+    <td><%= team.numStudents %></td>
+    <td><%= link_to team.school.name, school_path(team.school) %></td>
+  </tr>
+<% end %>
+</table>

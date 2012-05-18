@@ -1,13 +1,17 @@
-<li>
-	<div id="cell">
-    	<div id="top">
-        	<p><%= t("activerecord.attributes.event.name") %></p>
-      	</div>
-		<div id="bottom">
-       		<div id="info">
-        		<p><%= t("activerecord.attributes.event.date") %></br>
-		  		<%= t("activerecord.attributes.event.region") %></p>
-        	</div>
-    	</div>
-	</div>
-</li>
+<table>
+  <tr>
+    <th><%= t("activerecord.attributes.event.region") %></th>
+    <th><%= t("activerecord.attributes.event.name") %></th>
+    <th><%= t("activerecord.attributes.event.date") %></th>
+    <th><%= t("activerecord.attributes.event.spotsAvailable") %></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.region %></td>
+    <td><%= event.name %></td>
+    <td><%= event.date %></td>
+    <td><%= event.spotsAvailable %></td>
+  </tr>
+<% end %>
+</table>

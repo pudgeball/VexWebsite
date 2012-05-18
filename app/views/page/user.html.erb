@@ -1,15 +1,15 @@
-<h1>My Profile -  <%= link_to t("activerecord.attributes.school.title"), schools_path %></h1>
+<h1>My Profile - <%= link_to t("activerecord.attributes.school.title"), schools_path %></h1>
 <div style="width:95%;">
 	<div style="float:left; width:45%">
-		<h2>My Teams</h2>		
+		<h2>My Teams <%= link_to t("activerecord.attributes.teams.name"), teams_path %></h2>		
 		<ul>
-			<%= render :partial => "teams/team" %>
+			<%= render :partial => Team.where(:shool_id) %>
 		</ul>
 	</div>
 	<div style="float:right; width:45%">
-		<h2>My Events</h2>
+		<h2>My Events <%= link_to t("activerecord.attributes.event.title"), events_path %></h2>
 		<ul>
-			<%= render :partial => "events/event" %>
+			<%= render :partial => Team.where(:event_attendee) %>
 		</ul>
 	</div>
 </div>
