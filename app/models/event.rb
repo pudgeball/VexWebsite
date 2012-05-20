@@ -11,4 +11,8 @@ class Event < ActiveRecord::Base
   
   has_many :eventRecords
   has_many :event_attendees
+  
+  def spotsLeft
+    return spotsAvailable - event_attendees.length
+  end
 end

@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     
-    @page_title = "Event - #{@event.name}"
+    @page_title = "Event"
 
     respond_to do |format|
       format.html # show.html.erb

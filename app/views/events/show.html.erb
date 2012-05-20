@@ -1,29 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b><%= t("activerecord.attributes.event.region") %>:</b>
-  <%= @event.region %>
-</p>
-
-<p>
-  <b><%= t("activerecord.attributes.event.name") %>:</b>
-  <%= @event.name %>
-</p>
-
-<p>
-  <b><%= t("activerecord.attributes.event.date") %>:</b>
-  <%= @event.date %>
-</p>
-
-<p>
-  <b><%= t("activerecord.attributes.event.spotsAvailable") %>:</b>
-  <%= @event.spotsAvailable %>
-</p>
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-
-<ul>
-	<%= render(@event.event_attendees) %>
-</ul>
+<div id="entire">
+  <div id="title">
+    <h1><%= @event.name %></h1>
+  </div>
+  <div id="info">
+    <div id="text">
+      <h2>Date</h2>
+      <p><%= @event.date %></p>
+      <h2>Region</h2>
+      <p><%= @event.region %></p>
+      <h2>Spots Left</h2>
+      <p><%= @event.spotsLeft %> / <%= @event.spotsAvailable %></p>
+      
+      <h2>Who's Going!</h2>
+      <ul>
+        <%= render(@event.event_attendees) %>
+      </ul>
+    </div>
+    <div id="map">
+      <!-- PUT MAP HERE -->
+    </div>
+  </div>
+</div>
