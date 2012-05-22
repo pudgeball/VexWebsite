@@ -24,6 +24,10 @@
     <%= f.date_select :date %>
   </div>
   <div class="field">
+    <%= f.label :time %></br>
+    <%= time_select 'event', :time, {:ampm => true} %>
+  </div>
+  <div class="field">
     <%= f.label :spotsAvailable %><br />
     <%= f.select :spotsAvailable, 1..36 %>
   </div>

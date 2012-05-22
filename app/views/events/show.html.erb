@@ -6,8 +6,8 @@
   </div>
   <div id="info">
     <div id="text">
-      <h2>Date</h2>
-      <p><%= @event.date %></p>
+      <h2>Date & Time</h2>
+      <p><%= @event.date %> - <%= h @event.time.to_s(:default) %></p>
       <h2>Region</h2>
       <p><%= @event.region %></p>
       <h2>Spots Left</h2>
