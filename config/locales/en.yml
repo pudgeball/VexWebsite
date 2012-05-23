@@ -5,7 +5,7 @@ en:
   time:
     formats:
       default: "%H:%M"
-	  test: "%H"
+      test: "%H"
   activerecord:
     attributes:
       application:
