@@ -1,3 +1,27 @@
 // Place all the styles related to the Page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#page 
+{
+	width:95%;
+	margin:0 auto;
+	h2 
+	{
+		font-size: 40px;
+		line-height: normal;
+	}
+	
+	#left 
+	{
+		float:left;
+		background-color: #000000;
+		width: 50%;
+	}
+	
+	#right 
+	{
+		float:right;
+		background-color: #000000;
+		width:50%;
+	}
+}
