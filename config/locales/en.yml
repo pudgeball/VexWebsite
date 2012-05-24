@@ -5,7 +5,7 @@ en:
   time:
     formats:
       default: "%H:%M"
-      test: "%H"
+      event: "%A, %B %d at %H:%M %p"
   activerecord:
     attributes:
       application:
@@ -15,7 +15,7 @@ en:
         userEmail: "Email"
         userName: "Name"
       event:
-        date: "Date"
+        time: "Time"
         name: "Name"
         region: "Region"
         spotsAvailable: "Spots Available"
@@ -34,5 +34,3 @@ en:
         name: "Name"
         region: "Region"
         title: "School"
-        
-      

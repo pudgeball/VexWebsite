@@ -29,6 +29,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
+    @event.time = Time.now
     
     @page_title = "New Event"
 
