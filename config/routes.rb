@@ -1,9 +1,13 @@
 VexWebsite::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :applications, :events, :teams, :users, :schools, :event_attendees
   
   root to: "page#index"
   
-  match 'admin' => 'page#admin'
+  match 'adminMine' => 'page#admin'
   match 'profile' => 'page#user'
 
   # The priority is based upon order of creation:
