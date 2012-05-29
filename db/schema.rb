@@ -108,9 +108,8 @@ ActiveRecord::Schema.define(:version => 20120526005204) do
     t.string   "role"
     t.string   "name"
     t.integer  "school_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "password"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
@@ -125,5 +124,6 @@ ActiveRecord::Schema.define(:version => 20120526005204) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["school_id"], :name => "index_users_on_school_id"
 
 end
