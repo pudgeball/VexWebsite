@@ -1,4 +1,6 @@
 class PageController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index]
+  
   def index
     @page_title = "Index"
   end
@@ -11,7 +13,7 @@ class PageController < ApplicationController
     end
   end
   
-  def user
+  def user    
     @page_title = "Welcome!"
   end
 end
