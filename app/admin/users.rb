@@ -6,4 +6,15 @@ ActiveAdmin.register User do
     column :email
     default_actions
   end
+  
+  form do |f|
+    f.inputs "Details" do
+      f.input :name
+      f.input :email
+      f.input :password
+      f.input :role
+      f.input :school, :collection => @Schools
+    end
+    f.buttons
+  end
 end
