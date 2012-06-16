@@ -13,3 +13,13 @@
 		</ul>
 	</div>
 </div>
+
+
+</br></br></br></br></br>
+<div id="test">
+  <ul>
+    <% current_user.school.teams.each do |team| %>
+      <li><%= team.name %></li>
+    <% end %>
+  </ul>
+</div>

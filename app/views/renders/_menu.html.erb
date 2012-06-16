@@ -1,25 +1,9 @@
 <% if user_signed_in? %>
-  <li>
-    <%= link_to('Events', events_path) %>
-  </li>
-  <li>
-    <%= link_to('Teams', teams_path) %>
-  </li>
-  <li>
-    <%= link_to('Profile', users_path) %>
-  </li>
-  <li>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
+  <li><%= link_to('Events', events_path) %></li>
+  <li><%= link_to('Teams', teams_path) %></li>
+  <li><%= link_to('Profile', profile_path) %></li>
+  <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 <% else %>
-  <li>
-    <%= link_to('Login', new_user_session_path)  %>
-  </li>
-  <li>
-    <%= link_to('Apply', new_application_path)  %>
-  </li>
-<% end %>
-
-<% if @current_page.eql?("New Application") %>
-<p> ZOMG </p>
+  <li><%= link_to('Login', new_user_session_path) %></li>
+  <li><%= link_to('Apply', new_application_path) %></li>
 <% end %>

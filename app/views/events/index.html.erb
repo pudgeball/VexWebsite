@@ -1,4 +1,14 @@
-<h1>Listing <%= t("activerecord.attributes.event.title").pluralize %></h1>
+<div id="eventList">
+  <ul>
+    <% @events.each do |event| %>
+      <li>
+        <div id="cell">
+          <p><%= link_to event.name, event %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <table>
   <tr>
@@ -25,5 +35,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Event', new_event_path %>
