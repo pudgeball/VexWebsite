@@ -7,7 +7,7 @@ class Team < ActiveRecord::Base
             presence: true
   
   validates :numStudents,
-            numericality: { integer_only: 0, greater_than_or_equal_to: 0 }
+            numericality: { integer_only: 0, greater_than: 0 }
   
   has_many :eventRecords
   has_many :eventAttendees

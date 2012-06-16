@@ -4,6 +4,7 @@ ActiveAdmin.register User do
     column :role
     column :name
     column :email
+    column :school
     default_actions
   end
   
@@ -13,8 +14,27 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :role
-      f.input :school, :collection => @Schools
+      f.input :school, collection: @Schools
     end
     f.buttons
   end
+  
+  show do |s|
+    attributes_table do
+      row :id
+      row :role
+      row :name
+      row :school
+      row :email
+      row :created_at
+    end
+    active_admin_comments
+  end
+  
+  filter :school, collection: @Schools
+  filter :role
+  filter :name
+  filter :created_at
+  filter :email
+  
 end
