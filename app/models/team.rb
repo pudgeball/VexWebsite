@@ -10,5 +10,5 @@ class Team < ActiveRecord::Base
             numericality: { integer_only: 0, greater_than: 0 }
   
   has_many :eventRecords
-  has_many :eventAttendees
+  has_many :event_attendees
 end
