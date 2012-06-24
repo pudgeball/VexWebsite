@@ -31,33 +31,20 @@
     }
 	}
 	
-	#title {
+	#menu {
 		float: left;
 		width: 80%;
     
-    p {
-      font-size: 50px;
-  		color: white;
-  		text-align: center;
-  		line-height: 50px;
-  		padding-top: 45px;
-  		margin-bottom: 0px;
-  	}
-	}
-	
-	#menu {
-		float: left;
-    width: 80%;
-    
 		ul {
-      li {
-        display: inline;
-        a {
-          color: white;
-        }
-      }
-    }
-	}
+			li {
+				display: inline;
+				a {
+					font-size: 25px;
+					color: white;
+					}
+				}
+			}
+		}
 }
 
 #content {
@@ -67,9 +54,14 @@
 	overflow: hidden;
 	
   h1 {
-    color: black;
-    text-align: center;
-  }
+      font-size: 50px;
+  		color: black;
+  		text-align: center;
+  		line-height: 50px;
+  		margin-bottom: 0px;
+  	
+	}
+	
 }
 
 #created {

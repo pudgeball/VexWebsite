@@ -1,25 +1,20 @@
-<h1>My Profile - <%= link_to t("activerecord.attributes.school.title"), schools_path %></h1>
 <div id="page">
 	<div id="left">
-		<h2>My Teams <%= link_to t("activerecord.attributes.teams.name"), teams_path %></h2>		
+		<h2>My Teams</h2>		
 		<ul>
-			<%= render :partial => Team.where(:shool_id) %>
+			<% current_user.school.teams.each do |team| %>
+			<li><%= link_to team.name, team %></li>
+			<% end %>
 		</ul>
 	</div>
 	<div id="right">
-		<h2>My Events <%= link_to t("activerecord.attributes.event.title"), events_path %></h2>
+		<h2>My Events</h2>
 		<ul>
-			<%= render :partial => Team.where(:event_attendee) %>
+			<% current_user.school.teams.each do |team| %>
+				<% team.event_attendees.each do |event_attendee| %>
+						<li> <%= link_to event_attendee.event.name, event_attendee.event %></li>
+				<% end %>
+			<% end %>
 		</ul>
 	</div>
-</div>
-
-
-</br></br></br></br></br>
-<div id="test">
-  <ul>
-    <% current_user.school.teams.each do |team| %>
-      <li><%= team.name %></li>
-    <% end %>
-  </ul>
 </div>

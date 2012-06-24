@@ -14,6 +14,6 @@ class PageController < ApplicationController
   end
   
   def user    
-    @page_title = "Welcome!"
+    @page_title = "My Profile"
   end
 end
