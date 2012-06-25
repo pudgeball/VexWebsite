@@ -4,34 +4,12 @@
       <li>
         <div id="cell">
           <p><%= link_to event.name, event %></p>
+          <p><%= l event.time, format: :event %></p>
+          <p>Spots Available: <%= event.spotsAvailable %></p>
+          <p>Region: <%= event.region %></p>
+          <p><%= link_to, "Sign Up!", "#" %></p>
         </div>
       </li>
     <% end %>
   </ul>
 </div>
-
-<table>
-  <tr>
-    <th><%= t("activerecord.attributes.event.region") %></th>
-    <th><%= t("activerecord.attributes.event.name") %></th>
-    <th><%= t("activerecord.attributes.event.date") %></th>
-    <th><%= t("activerecord.attributes.event.spotsAvailable") %></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.region %></td>
-    <td><%= event.name %></td>
-    <td><%= event.time %></td>
-    <td><%= event.spotsAvailable %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
