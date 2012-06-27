@@ -5,10 +5,14 @@
         <div id="cell">
           <p><%= link_to event.name, event %></p>
           <p><%= l event.time, format: :event %></p>
-          <p>Spots Available: <%= event.spotsAvailable %></p>
+          <p>Spots Available: <%= spotsLeft(event) %></p>
           <p>Region: <%= event.region %></p>
           <% if user_signed_in? %>
-            <%= link_to "Sign Up!", signup_path(event.id) %>
+            <% if canSignUp(event) %>
+              <%= link_to "Sign Up!", signup_path(event.id) %>
+            <% else %>
+              <p>All full up!</p>
+            <% end %>
           <% end %>
         </div>
       </li>

@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <div id="events">
-  <div id="title">
-    <h1><%= @event.name %></h1>
-  </div>
   <div id="info">
     <div id="text">
       <h2>Date & Time</h2>
@@ -13,7 +10,7 @@
       <p><%= @event.region %></p>
       
       <h2>Spots Left</h2>
-      <p><%= @event.spotsLeft %> / <%= @event.spotsAvailable %></p>
+      <p><%= spotsLeft(@event) %> / <%= @event.spotsAvailable %></p>
       
       <h2>Who's Going!</h2>
       <ul>
