@@ -10,4 +10,14 @@ module EventsHelper
       return true;
     end
   end
+  
+  def signUp(event)
+    if user_signed_in?
+      if canSignUp(event)
+        link_to "Sign Up!", signup_path(event.id)
+      else
+        content_tag(:p, 'All full up!')
+      end
+    end
+  end
 end

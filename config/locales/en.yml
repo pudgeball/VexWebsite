@@ -6,6 +6,7 @@ en:
     formats:
       default: "%H:%M"
       event: "%A, %B %d at %H:%M %p"
+      event_cell: "%A, %B %d"
   activerecord:
     attributes:
       application:
