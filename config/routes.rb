@@ -9,9 +9,11 @@ VexWebsite::Application.routes.draw do
   
   root to: "page#index"
   
-  match 'adminMine' => 'page#admin'
-  match 'profile' => 'page#user'
-
+  match 'profile' => 'page#user', via: :get
+  match 'events/signup/:id' => 'events#signup', as: :signup, via: :get
+  match 'events/signup/:id' => 'events#create_signup', as: :signup,  via: :post
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

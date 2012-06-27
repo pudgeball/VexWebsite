@@ -7,7 +7,9 @@
           <p><%= l event.time, format: :event %></p>
           <p>Spots Available: <%= event.spotsAvailable %></p>
           <p>Region: <%= event.region %></p>
-          <p><%= link_to, "Sign Up!", "#" %></p>
+          <% if user_signed_in? %>
+            <%= link_to "Sign Up!", signup_path(event.id) %>
+          <% end %>
         </div>
       </li>
     <% end %>

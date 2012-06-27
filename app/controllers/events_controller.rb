@@ -89,4 +89,41 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # GET /events/signup/1
+  def signup
+    @event = Event.find(params[:id])
+    
+    @page_title = "Sign Up"
+    
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  # POST /events/signup/1
+  def create_signup
+    @test = params
+    @params = params[:signup]
+    @event = Event.find(params[:id])
+    
+    @params.each do |check|
+      @team = Team.find(check[0])
+      if (check[1].eql? "1")
+        if (EventAttendee.where("team_id = ? AND event_id = ?", @team.id, @event.id).count == 0)
+          @eventattendee = EventAttendee.new(team_id: @team.id, event_id: @event.id)
+          @eventattendee.save
+        end
+      elsif (check[1].eql? "0")
+        if (EventAttendee.where("team_id = ? AND event_id = ?", @team.id, @event.id).count == 1)
+          @eventattendee = EventAttendee.where("team_id = ? AND event_id = ?", @team.id, @event.id).first
+          @eventattendee.destroy
+        end
+      end
+    end
+      
+    respond_to do |format|
+      format.html { redirect_to @event }
+    end
+  end
 end

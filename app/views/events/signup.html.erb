@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div id="eventSignUp">
+  <h2>Which <%= pluralize(current_user.school.teams.count, "team") %> do you want to want to sign up for event: <%= @event.name %>?</h2>
+  <%= form_tag(signup_path, method: :post) do %>
+    <% current_user.school.teams.each do |team| %>
+      <div class="field">
+        <%= label("name", team.name) %>
+        <% if (EventAttendee.where("team_id = ? AND event_id = ?", team.id, @event.id).count > 0)%>
+          <%= check_box("signup", team.id, {checked: true}) %>
+        <% else %>
+          <%= check_box("signup", team.id) %>
+        <% end %>
+      </div>
+    <% end %>
+    
+    <div class="actions">
+      <%= submit_tag "Confirm" %>
+    </div>
+  <% end %>
+</div>

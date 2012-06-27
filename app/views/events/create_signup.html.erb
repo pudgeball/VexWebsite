@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div id="eventSignUp">
+  <%= debug(@test) %>
+  
+  <%= debug(@params) %>
+  <% @params.each do |team| %>
+  <p><% @teamtest = Team.find(team[0])%><p>
+    <%= @teamtest.name %>
+    <% if (team[1].eql? "1") %>
+      <% if (EventAttendee.where("team_id = ? AND event_id = ?", team[0], @event.id).count == 0) %>
+        <p>create <%= team %> </p>
+      <% else %>
+        <p> 1 <%= team %> </p>
+      <% end %>
+    <% elsif (team[1].eql? "0") %>
+      <% if (EventAttendee.where("team_id = ? AND event_id = ?", team[0], @event.id).count == 1) %>
+        <p>delete <%= team %></p>
+      <% else %>
+        <p> 0 <%= team %></p>
+      <% end%>
+    <% end %>
+  <% end %>
+</div>
