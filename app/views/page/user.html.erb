@@ -1,20 +1,18 @@
 <div id="page">
-	<div id="left">
-		<h2>My Teams</h2>		
-		<ul>
-			<% current_user.school.teams.each do |team| %>
-			<li><%= link_to team.name, team %></li>
-			<% end %>
-		</ul>
-	</div>
-	<div id="right">
-		<h2>My Events</h2>
-		<ul>
-			<% current_user.school.teams.each do |team| %>
-				<% team.event_attendees.each do |event_attendee| %>
-						<li> <%= link_to event_attendee.event.name, event_attendee.event %></li>
-				<% end %>
-			<% end %>
-		</ul>
-	</div>
+  <div id="left">
+    <h2>My Teams</h2>		
+    <ul>
+      <% @teams.each do |team| %>
+        <li><%= link_to team.name, team %></li>
+        <% end %>
+    </ul>
+  </div>
+  <div id="right">
+    <h2>My Events</h2>
+    <ul>
+      <% @events.each do |event| %>
+        <li> <%= link_to event.name, event %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

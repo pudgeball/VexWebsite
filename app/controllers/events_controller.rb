@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_filter :authenticate_user!, only: [:signup, :create_signup]
+  
   # GET /events
   # GET /events.json
   def index
