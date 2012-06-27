@@ -20,4 +20,12 @@ module EventsHelper
       end
     end
   end
+  
+  def pluralizeTitle(count, title)
+    if count > 1
+      return title+"s"
+    else
+      return title
+    end
+  end
 end

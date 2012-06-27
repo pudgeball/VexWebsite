@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div id="eventSignUp">
-  <h2>Which <%= pluralize(current_user.school.teams.count, "team") %> do you want to want to sign up for event: <%= @event.name %>?</h2>
+  <h2>Which <%= pluralizeTitle(current_user.school.teams.count, "team") %> do you want to want to sign up for event: <%= @event.name %>?</h2>
   <%= form_tag(signup_path, method: :post) do %>
     <% current_user.school.teams.each do |team| %>
       <div class="field">
