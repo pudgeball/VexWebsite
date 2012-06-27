@@ -2,15 +2,7 @@ class PageController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
   
   def index
-    @page_title = "Index"
-  end
-  
-  def admin
-    @page_title = "Admin"
-    
-    respond_to do |format|
-      format.html
-    end
+    @page_title = "Page#index"
   end
   
   def user    
