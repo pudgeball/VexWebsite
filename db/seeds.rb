@@ -8,11 +8,13 @@
 
 applications = Application.create([{schoolName: 'Burlington Central High School', teamName: 'Awesomenauts', userEmail: 'pudgeball@me.com', userName: 'Nick McGuire'}, {schoolName: 'MMR High School', teamName: 'Hammy', userEmail: 'hammeld@hdsb.ca', userName: 'Dave Hammel'}])
 
-schools = School.create([{name: 'Burlington Central High School', region: 'South'}, {name: 'MMR High School', region: 'South'}])
+regions = Region.create([{name: 'North'}, {name: 'South'}])
+
+schools = School.create([{name: 'Burlington Central High School', region_id: regions.find(1).first.id }, {name: 'MMR High School', region_id: regions.find(1).first.id }])
 
 teams = Team.create([{name:'Awesomenauts', numStudents:4, school_id: schools.first.id}])
 
-events = Event.create([{spotsAvailable:20, region: 'South', name:'VEX HDSB', time: Time.now()}])
+events = Event.create([{spotsAvailable:20, region_id: regions.find(1).first.id, name:'VEX HDSB', time: Time.now()}])
 
 users = User.create([{email: 'pudgeball@me.com', name: 'Nick McGuire', role: 'Admin', school_id: schools.first.id, password:'password'}])
 

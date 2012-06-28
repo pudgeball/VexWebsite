@@ -1,6 +1,4 @@
 class Team < ActiveRecord::Base
-  belongs_to :school
-  
   attr_accessible :name, :numStudents, :school_id
   
   validates :name, :numStudents, :school_id,
@@ -9,6 +7,7 @@ class Team < ActiveRecord::Base
   validates :numStudents,
             numericality: { integer_only: 0, greater_than: 0 }
   
+  belongs_to :school
   has_many :eventRecords
   has_many :event_attendees
 end

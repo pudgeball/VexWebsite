@@ -6,7 +6,7 @@
           <p><%= link_to event.name, event %></p>
           <p><%= l event.time, format: :event_cell %></p>
           <p>Spots Available: <%= spotsLeft(event) %></p>
-          <p>Region: <%= event.region %></p>
+          <p>Region: <%= event.region.name %></p>
           <%= signUp(event) %>
         </div>
       </li>

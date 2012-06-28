@@ -5,16 +5,16 @@ module EventsHelper
   
   def canSignUp(event)
     if (spotsLeft(event) == 0)
-      return false;
+      return false
     else
-      return true;
+      return true
     end
   end
   
   def signUp(event)
     if user_signed_in?
       if canSignUp(event)
-        link_to "Sign Up!", signup_path(event.id)
+        link_to("Sign Up!", signup_path(event.id))
       else
         content_tag(:p, 'All full up!')
       end
@@ -28,4 +28,5 @@ module EventsHelper
       return title
     end
   end
+  
 end

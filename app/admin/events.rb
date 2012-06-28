@@ -11,7 +11,7 @@ ActiveAdmin.register Event do
   form do |f|
     f.inputs "Event Details" do
       f.input :name
-      f.input :region
+      f.input :region, collection: @Regions
       f.input :spotsAvailable, as: :select, collection: 1..36
       f.input :time
     end

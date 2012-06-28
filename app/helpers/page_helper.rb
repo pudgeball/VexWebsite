@@ -1,6 +1,6 @@
 module PageHelper
   def retrieveTeams(school)
-    @teams = []
+    @teams = Array.new
     school.teams.each do |team|
       @teams.push(team)
     end
@@ -8,7 +8,7 @@ module PageHelper
   end
   
   def retrieveEvents(teams)
-    @events = []
+    @events = Array.new
     
     teams.each do |team|
       team.event_attendees.each do |attendee|

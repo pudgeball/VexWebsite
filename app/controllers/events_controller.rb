@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.where("time >= ?", Time.now).all
+    @events = Event.where("time >= ?", Time.now.beginning_of_day).all
     
     @page_title = "Events"
 
