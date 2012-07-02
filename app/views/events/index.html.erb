@@ -1,15 +1,22 @@
 <div id="eventList">
-  <ul>
-    <% @events.each do |event| %>
-      <li>
-        <div id="cell">
-          <p><%= link_to event.name, event %></p>
-          <p><%= l event.time, format: :event_cell %></p>
-          <p>Spots Available: <%= spotsLeft(event) %></p>
-          <p>Region: <%= event.region.name %></p>
-          <%= signUp(event) %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
+  <h2>Upcoming Events</h2>	
+  <% if @events.count > 0 %>
+    <ul>
+      <% @events.each do |event| %>
+        <li>
+          <div id="cell">
+            <p><%= link_to event.name, event %></p>
+            <p><%= l event.time, format: :event_cell %></p>
+            <p>Spots Available: <%= spotsLeft(event) %></p>
+            <p id='region'>Region: <%= event.region.name %></p>
+            <p><%= signUp(event) %></p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <div>
+      <p>NO EVENTS YET :(</p>
+    </div>
+  <% end %>
 </div>

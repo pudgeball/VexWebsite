@@ -14,7 +14,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :role
-      f.input :school, collection: @Schools
+      f.input :school
     end
     f.buttons
   end
@@ -31,7 +31,7 @@ ActiveAdmin.register User do
     active_admin_comments
   end
   
-  filter :school, collection: @Schools
+  filter :school
   filter :role
   filter :name
   filter :created_at

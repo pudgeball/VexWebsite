@@ -7,7 +7,7 @@ class ApplicationsController < ApplicationController
     @page_title = "Pending Applications"
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to root_path }# index.html.erb
       format.json { render json: @applications }
     end
   end

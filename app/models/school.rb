@@ -1,7 +1,7 @@
 class School < ActiveRecord::Base
   attr_accessible :name, :region_id
   
-  validates :name, :region_id,
+  validates :name, :region,
               presence: true
   
   belongs_to :region

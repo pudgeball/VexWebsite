@@ -16,7 +16,7 @@ module EventsHelper
       if canSignUp(event)
         link_to("Sign Up!", signup_path(event.id))
       else
-        content_tag(:p, 'All full up!')
+        'All full up!'
       end
     end
   end

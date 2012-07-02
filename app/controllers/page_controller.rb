@@ -3,7 +3,7 @@ class PageController < ApplicationController
   include PageHelper
   
   def index
-    @page_title = "Page#index"
+    @page_title = "Welcome!"
   end
   
   def user    

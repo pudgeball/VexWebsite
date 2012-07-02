@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
   attr_accessible :name, :numStudents, :school_id
   
-  validates :name, :numStudents, :school_id,
+  validates :name, :numStudents, :school,
             presence: true
   
   validates :numStudents,
