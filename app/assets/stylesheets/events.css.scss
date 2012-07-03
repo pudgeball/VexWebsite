@@ -1,6 +1,41 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#eventList {
+	h2 {
+		color: black;
+		text-align: center;
+	}
+	
+	ul {
+		list-style-type: none;
+	}
+	
+	#cell {
+		height: 80px;
+	    background-color: #1B77B2;
+	    border: 1px solid black;
+	    width: 600px;
+		padding: 10px;
+		margin: 0 auto 0 auto;
+		
+		p {
+			color: white;
+			margin: 0px;
+			a {
+				color: #FFFD4C;
+			}	
+		}
+		
+		p#region {
+			float: left;
+		}
+		p:last-child {
+			float: right;
+		}
+		
+	}
+}
 
 #events {
 	#title {
@@ -32,6 +67,38 @@
 			p {
 				color: white;
 			}
+			
+			ul {
+				list-style-type: none;
+				padding-left: 0px;
+				border: 2px black solid;
+				width: 250px;
+				overflow: hidden;
+				
+				.break {
+					background-color: black !important;
+					padding: 0px;
+				}
+				
+				li {
+					text-align: center;
+					padding: 7px;
+					width: inherit;
+					border: 1px black solid;
+					
+					background-color: #FFFD4C;
+					a {
+						color: black;
+					}
+				}
+				
+				.signUp {
+					background-color: #808080;
+					a {
+						color: white;
+					}
+				}
+			}
 		}
 		#map {
 			background-color: #000000;
@@ -41,37 +108,42 @@
 	}
 }
 
-#eventList {
-	h2 {
-		color: black;
-		text-align: center;
-	}
-	
-	ul {
-		list-style-type: none;
-	}
-	
-	#cell {
-		height: 80px;
-	    background-color: #1B77B2;
-	    border: 1px solid black;
-	    width: 600px;
-		padding: 10px;
+#eventSignUp {
+	form {
+		width: 600px;
 		margin: 0 auto 0 auto;
+		background-color: #1B77B2;
+		border: 2px black solid;
+		overflow: hidden;
 		
-		p {
-			color: white;
-			a {
-				color: #FFFD4C;
-			}	
+		.field {
+			label {
+				color: white;
+			}
+			
+			input {
+				float:right;
+			}
+		}
+		.first {
+			padding: 10px 10px 0 10px;
 		}
 		
-		p#region {
-			float: left;
+		.last {
+			padding: 0 10px 10px 10px;
 		}
-		p:last-child {
-			float: right;
+
+		.actions {
+			margin-bottom: 0px;
+			width: 100%;
+			background-color: black;
+			padding: 7px;
+			
+			input {
+				margin: 0 auto 0 auto;
+				display: block;
+				width: 100px;
+			}
 		}
-		
 	}
 }

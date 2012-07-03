@@ -4,7 +4,13 @@
   <h2>Which <%= pluralizeTitle(current_user.school.teams.count, "team") %> do you want to want to sign up for event: <%= @event.name %>?</h2>
   <%= form_tag(signup_path, method: :post) do %>
     <% current_user.school.teams.each do |team| %>
+      <% if team == current_user.school.teams.first %>
+      <div class="field first">
+      <% elsif team == current_user.school.teams.last %>
+      <div class="field last">
+      <% else %>
       <div class="field">
+      <% end %>
         <%= label("name", team.name) %>
         <% if (EventAttendee.where("team_id = ? AND event_id = ?", team.id, @event.id).count > 0)%>
           <%= check_box("signup", team.id, {checked: true}) %>

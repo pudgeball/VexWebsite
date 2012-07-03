@@ -49,8 +49,16 @@
 	#menu {
 		float: left;
 		width: 80%;
+		position: relative;
+		height: 50px;
 		
 		ul {
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			display: block;
+			margin: 0;
+			
 			li {
 				display: inline;
 				margin-right: 10px;
