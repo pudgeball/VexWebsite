@@ -19,6 +19,13 @@ VexWebsite::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {
+    :host => 'vex.nickmcguire.com',
+    :port => '80'
+  }
+  config.action_mailer.raise_delivery_errors = true
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
