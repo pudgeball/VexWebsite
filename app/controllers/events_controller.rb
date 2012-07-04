@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!, only: [:signup, :create_signup]
   
+  include EventsHelper
+  
   # GET /events
   # GET /events.json
   def index
-    @events = Event.where("time >= ?", Time.now.beginning_of_day).all
+    @events = getUpcomingEvents()
     
     @page_title = "Events"
 

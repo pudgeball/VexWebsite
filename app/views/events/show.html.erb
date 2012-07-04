@@ -16,7 +16,7 @@
       <h3>Who's Going!</h3>
       <ul>
         <%= render(@event.event_attendees) %>
-        <% if user_signed_in? %>
+        <% if user_signed_in? && !isPastDate(@event) %>
           <li class="break"></li>
           <li class="signUp"><%= signUp(@event) %></li>
         <% end %>
