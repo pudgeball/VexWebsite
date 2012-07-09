@@ -1,14 +1,20 @@
 <div id="page">
-  <div id="left">
-    <h2>My Teams</h2>		
+  <div>
+    <div>
+      <h2>My Teams</h2>
+      <h3><%= link_to "Apply", root_path %></h3>
+    </div>
     <ul>
       <% @teams.each do |team| %>
         <li><%= link_to team.name, team %></li>
-        <% end %>
+      <% end %>
     </ul>
   </div>
-  <div id="right">
-    <h2>My Events</h2>
+  <div>
+    <div>
+      <h2>My Events</h2>
+      <h3><%= link_to "Sign-Up!", root_path %>
+    </div>
     <ul>
       <% @events.each do |event| %>
         <li> <%= link_to event.name, event %></li>

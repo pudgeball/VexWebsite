@@ -10,6 +10,6 @@ class PageController < ApplicationController
     @page_title = "My Profile"
     
     @teams = retrieveTeams(current_user.school)
-    @events = retrieveEvents(@teams)
+    @events = filterForUpcoming(retrieveEvents(@teams))
   end
 end

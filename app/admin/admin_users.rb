@@ -13,4 +13,8 @@ ActiveAdmin.register AdminUser do
     end
     f.buttons
   end
+  
+  filter :email
+  filter :created_at
+  filter :updated_at
 end

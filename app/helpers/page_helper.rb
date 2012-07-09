@@ -18,4 +18,8 @@ module PageHelper
     
     return @events.uniq
   end
+  
+  def filterForUpcoming(events)
+    return events.select { |event| event.time >= Time.now.beginning_of_day }
+  end
 end

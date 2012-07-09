@@ -7,6 +7,9 @@
       <h3>Date & Time</h3>
       <p><%= l @event.time, :format => :event %></p>
       
+      <h3>Where</h3>
+      <p id="location">381 Stratheden Drive, Burlington, Ontario, Canada</p>
+      
       <h3>Region</h3>
       <p><%= @event.region.name %></p>
       
@@ -22,8 +25,7 @@
         <% end %>
       </ul>
     </div>
-    <div id="map">
-      <!-- PUT MAP HERE -->
+    <div id="map" style="height: 500px;">
     </div>
   </div>
 </div>

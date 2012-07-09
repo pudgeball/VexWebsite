@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+  config.sort_order = :id_asc
+  
   index do
     column :id
     column :role

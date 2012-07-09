@@ -1,4 +1,6 @@
 ActiveAdmin.register Event do
+  config.sort_order = :id_asc
+  
   index do
     column :id
     column :region

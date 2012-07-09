@@ -1,4 +1,6 @@
 ActiveAdmin.register Application do
+  config.sort_order = :id_asc
+  
   index do
     column :id
     column :teamName
@@ -8,4 +10,9 @@ ActiveAdmin.register Application do
     default_actions
   end
   
+  filter :teamName
+  filter :userName
+  filter :userEmail
+  filter :schoolName
+  filter :created_at
 end
