@@ -4,6 +4,9 @@ class Team < ActiveRecord::Base
   validates :name, :numStudents, :school,
             presence: true
   
+  validates :name, 
+            uniqueness: true
+  
   validates :numStudents,
             numericality: { integer_only: 0, greater_than: 0 }
   

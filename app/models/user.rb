@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
   
   attr_accessible :email, :name, :role, :school_id, :password
   
-  validates :email, :name, :role, :school, :password,
-            presence: true
+  validates :email, :name, :role, :school, :password, presence: true
+  
+  validates :email, :name, uniqueness: true
   
 end
