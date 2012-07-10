@@ -1,24 +1,48 @@
 <div id="page">
-  <div>
-    <div>
-      <h2>My Teams</h2>
+  <div id="user">
+  	<p><span id="pageTitle"><%= current_user.name %></span><%= link_to "Edit Info", edit_user_registration_path(current_user) %> </p>
+  </div>
+  <div id="userTeam">
+    <div id="userInner">
+      <h2><%= link_to "My Teams", teams_path %></h2>
       <h3><%= link_to "Apply", root_path %></h3>
     </div>
+    <% if @teams.count > 0 %>
     <ul>
       <% @teams.each do |team| %>
-        <li><%= link_to team.name, team %></li>
+        <li>
+          <div id="cell">
+            <p><%= link_to team.name, team %></p>
+          </div>
+        </li>
       <% end %>
     </ul>
-  </div>
-  <div>
+    <% else %>
     <div>
-      <h2>My Events</h2>
+      <p>NO TEAMS YET :(</p>
+    </div>
+    <% end %>
+  </div>
+  <div id="userEvent">
+    <div id="userInner">
+      <h2><%= link_to "My Events", events_path %></h2>
       <h3><%= link_to "Sign-Up!", root_path %>
     </div>
+    <% if @events.count > 0 %>
     <ul>
       <% @events.each do |event| %>
-        <li> <%= link_to event.name, event %></li>
+        <li>
+          <div id="cell">
+            <p><%= link_to event.name, event %></p>
+            <p><%= l event.time, format: :event_cell %></p>
+          </div>
+        </li>
       <% end %>
     </ul>
+    <% else %>
+    <div>
+      <p>NO EVENTS YET :(</p>
+    </div>
+  <% end %>
   </div>
 </div>

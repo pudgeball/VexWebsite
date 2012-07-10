@@ -9,36 +9,42 @@
 		font-size: 40px;
 		line-height: normal;
 	}
+	#pageTitle {
+		font-size: 40px;
+	}
 	
-	> div {
+	#user {
+		width: 100%;
+		text-align: center;
+	}
+	
+	#userTeam {
 		width: 47%;
 		background-color: white;
-		
-		div {
-			position: relative;
-			padding: 10px;
-			border-bottom: 1px black solid;
-			
-			h2 {
-				margin: 0px;
-			}
-			
-			h3 {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				margin: 0 0 10px;
-				font-size: 1.0em;
-				text-transform: uppercase;
-			}
-		}
-	}
-	
-	> div:first-child {
 		float:left;
 	}
-	
-	> div:last-child {
+	#userEvent {
+		width: 47%;
+		background-color: white;
 		float:right;
+	}
+
+	#userInner {
+		position: relative;
+		padding: 10px;
+		border-bottom: 1px black solid;
+		
+		h2 {
+			margin: 0px;
+		}
+		
+		h3 {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			margin: 0 0 10px;
+			font-size: 1.0em;
+			text-transform: uppercase;
+		}
 	}
 }

@@ -11,8 +11,13 @@ class User < ActiveRecord::Base
   
   attr_accessible :email, :name, :role, :school_id, :password
   
+<<<<<<< HEAD
   validates :email, :name, :role, :school, :password, presence: true
   
   validates :email, :name, uniqueness: true
+=======
+  validates :email, :name, :role, :school, 
+            presence: true
+>>>>>>> Fully working profile page
   
 end
