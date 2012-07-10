@@ -1,9 +1,9 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :region_id, :spotsAvailable, :time
+  attr_accessible :name, :region_id, :spotsAvailable, :time, :location
 
   validates :name, uniqueness: true
   
-  validates :spotsAvailable, :region, :name, :time,
+  validates :spotsAvailable, :region, :name, :time, :location,
             presence: true
             
   validates :spotsAvailable, 

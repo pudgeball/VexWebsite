@@ -8,7 +8,7 @@
       <p><%= l @event.time, :format => :event %></p>
       
       <h3>Where</h3>
-      <p id="location">381 Stratheden Drive, Burlington, Ontario, Canada</p>
+      <p id="location"><%= @event.location %></p>
       
       <h3>Region</h3>
       <p><%= @event.region.name %></p>
@@ -17,13 +17,15 @@
       <p><%= spotsLeft(@event) %> / <%= @event.spotsAvailable %></p>
       
       <h3>Who's Going!</h3>
-      <ul>
-        <%= render(@event.event_attendees) %>
-        <% if user_signed_in? && !isPastDate(@event) %>
-          <li class="break"></li>
-          <li class="signUp"><%= signUp(@event) %></li>
-        <% end %>
-      </ul>
+      <% if (@event.event_attendees.length > 0) %>
+        <ul>
+          <%= render(@event.event_attendees) %>
+          <% if user_signed_in? && !isPastDate(@event) %>
+            <li class="break"></li>
+            <li class="signUp"><%= signUp(@event) %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
     <div id="map" style="height: 500px;">
     </div>
