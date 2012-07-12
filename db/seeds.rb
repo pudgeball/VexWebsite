@@ -14,7 +14,7 @@ schools = School.create([{name: 'Burlington Central High School', region_id: reg
 
 teams = Team.create([{name:'Awesomenauts', numStudents:4, school_id: schools.first.id}])
 
-events = Event.create([{spotsAvailable:20, region_id: regions.find(1).first.id, name:'VEX HDSB', time: Time.now()}])
+events = Event.create([{spotsAvailable:20, region_id: regions.find(1).first.id, name:'VEX HDSB', time: Time.now(), location: '1433 Baldwin Street, Burlington, ON, Canada' }])
 
 users = User.create([{email: 'pudgeball@me.com', name: 'Nick McGuire', role: 'Admin', school_id: schools.first.id, password:'password'}])
 

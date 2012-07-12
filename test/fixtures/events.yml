@@ -2,7 +2,8 @@
 
 EventOne:
   id: 1
-  region: MyString
-  name: MyString
-  date: 2012-05-10
-  spotsAvailable: 1
+  region_id: 1
+  name: Event
+  time: 2012-05-03 21:00:00 UTC
+  spotsAvailable: 2
+  location: '1433 Baldwin Street, Burlington, Ontario, Canada'

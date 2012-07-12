@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 UserOne:
-  role: MyString
-  email: MyString
-  name: MyString
+  role: Admin
+  email: pudgeball@me.com
+  name: 'Nick McGuire'
   school_id: 1
-
+  

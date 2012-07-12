@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 ApplicationOne:
-  teamName: MyString
-  userName: MyString
-  userEmail: MyString
-  schoolName: MyString
+  teamName: Awesomenauts
+  userName: 'Nick McGuire'
+  userEmail: pudgeball@me.com
+  schoolName: 'Burlington Central High School'

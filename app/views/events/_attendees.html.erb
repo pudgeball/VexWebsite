@@ -1,0 +1,9 @@
+<% if @event.event_attendees.length > 0 %>
+  <ul>
+	<%= render @event.event_attendees %>
+	<% if user_signed_in? && !isPastDate(@event) %>
+	  <li class="break"></li>
+	  <li class="signUp"><%= signUp @event %></li>
+	<% end %>
+  </ul>
+<% end %>

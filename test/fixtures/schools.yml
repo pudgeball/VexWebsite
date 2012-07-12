@@ -2,5 +2,5 @@
 
 SchoolOne:
   id: 1
-  region: MyString
-  name: MyString
+  region_id: 1
+  name: 'Burlington Central High School'

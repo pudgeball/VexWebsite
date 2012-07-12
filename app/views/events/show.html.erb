@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div id="events">
-  <h2><%= @page_title %></h2>
+  <h2><%= @event.name %></h2>
   <div id="info">
     <div id="text">
       <h3>Date & Time</h3>
@@ -17,17 +17,9 @@
       <p><%= spotsLeft(@event) %> / <%= @event.spotsAvailable %></p>
       
       <h3>Who's Going!</h3>
-      <% if (@event.event_attendees.length > 0) %>
-        <ul>
-          <%= render(@event.event_attendees) %>
-          <% if user_signed_in? && !isPastDate(@event) %>
-            <li class="break"></li>
-            <li class="signUp"><%= signUp(@event) %></li>
-          <% end %>
-        </ul>
-      <% end %>
+      <%= render "attendees" %>
     </div>
-    <div id="map" style="height: 500px;">
+    <div id="map">
     </div>
   </div>
 </div>
