@@ -19,15 +19,91 @@
 	}
 	
 	#userTeam {
+		overflow: hidden;
+		background-color: #1B77B2;
+		padding: 10px;
+		border: 1px black solid;
 		width: 47%;
-		background-color: white;
-		float:left;
-	}
+		float: left;
+			a {
+			color: black;
+			}
+			h3 {
+				color: white;
+				text-decoration: underline;
+			}
+			p {
+				color: Black;
+			}
+			
+			ul {
+				list-style-type: none;
+				padding-left: 0px;
+				border: 2px black solid;
+				width: 100%;
+				overflow: hidden;
+				
+				.break {
+					background-color: black !important;
+					padding: 0px;
+				}
+				
+				li {
+					text-align: center;
+					padding: 7px;
+					width: inherit;
+					border: 1px black solid;
+					
+					background-color: #FFFD4C;
+					a {
+						color: black;
+					}
+				}
+			}
+		}
 	#userEvent {
+		overflow: hidden;
+		background-color: #1B77B2;
+		padding: 10px;
+		border: 1px black solid;
 		width: 47%;
-		background-color: white;
-		float:right;
-	}
+		float: right;
+			a {
+			color: black;
+			}
+			h3 {
+				color: white;
+				text-decoration: underline;
+			}
+			p {
+				color: Black;
+			}
+			
+			ul {
+				list-style-type: none;
+				padding-left: 0px;
+				border: 2px black solid;
+				width: 100%;
+				overflow: hidden;
+				
+				.break {
+					background-color: black !important;
+					padding: 0px;
+				}
+				
+				li {
+					text-align: center;
+					padding: 7px;
+					width: inherit;
+					border: 1px black solid;
+					
+					background-color: #FFFD4C;
+					a {
+						color: black;
+					}
+				}
+			}
+		}
 
 	#userInner {
 		position: relative;
