@@ -1,3 +1,51 @@
 // Place all the styles related to the teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#teamDetails {
+		overflow: hidden;
+		background-color: #1B77B2;
+		padding: 10px;
+		border: 1px black solid;
+			h1 {
+				color: #FFFD4C;
+			}
+			a {
+			color: #FFFD4C;
+			}
+			h3 {
+				color: white;
+				text-decoration: underline;
+			}
+			td {
+				color: white;
+			}
+			p {
+				color: white;
+			}
+			
+			ul {
+				list-style-type: none;
+				padding-left: 0px;
+				border: 2px black solid;
+				width: 100%;
+				overflow: hidden;
+				
+				.break {
+					background-color: black !important;
+					padding: 0px;
+				}
+				
+				li {
+					text-align: center;
+					padding: 7px;
+					width: inherit;
+					border: 1px black solid;
+					
+					background-color: #FFFD4C;
+					a {
+						color: black;
+					}
+				}
+			}
+		}

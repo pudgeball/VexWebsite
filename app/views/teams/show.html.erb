@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b><%= t("activerecord.attributes.team.name") %>:</b>
-  <%= @team.name %>
-</p>
-
-<p>
-  <b><%= t("activerecord.attributes.team.numStudents") %>:</b>
-  <%= @team.numStudents %>
-</p>
-
-<p>
-  <b><%= t("activerecord.attributes.team.school") %>:</b>
-  <%= @team.school.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<div id="teamDetails">
+	<h1> Info </h1>
+	
+	<p>
+	  <b><%= t("activerecord.attributes.team.numStudents") %>:</b>
+	  <%= @team.numStudents %>
+	</p>
+	
+	<p>
+	  <b><%= t("activerecord.attributes.team.school") %>:</b>
+	  <%= @team.school.name %>
+	</p>
+	
+	
+	<%= link_to 'Edit', edit_team_path(@team) %> |
+	<%= link_to 'Back', teams_path %>
+</div>
