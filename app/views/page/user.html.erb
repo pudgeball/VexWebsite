@@ -1,6 +1,7 @@
 <div id="page">
   <div id="user">
-  	<p><span id="pageTitle"><%= current_user.name %></span><%= link_to "Edit Info", edit_user_registration_path(current_user) %> </p>
+  	<p><span id="pageTitle"><%= current_user.name %></span></p>
+  	<p><%= link_to "Edit Info", edit_user_registration_path(current_user) %></p>
   </div>
   <div id="userTeam">
     <div id="userInner">

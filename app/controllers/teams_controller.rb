@@ -4,7 +4,7 @@ class TeamsController < ApplicationController
   def index
     @teams = Team.all
     
-    @page_title = "All Teams"
+    @page_title = "Teams"
 
     respond_to do |format|
       format.html # index.html.erb
