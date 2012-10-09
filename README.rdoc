@@ -1,5 +1,0 @@
-== Welcome to the home of my Vex Management Software
-
-This project was created to handle the parts of our Vex community that could be automated.  This system makes it super easy to handle events, teams, schools and users.  
-
-If you have any questions, email me at {nick@nickmcguire.com}[mailto:nick@nickmcguire.com], or {fork me}[https://github.com/pudgeball/VexWebsite/fork_select] to make something better :)
