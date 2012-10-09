@@ -4,37 +4,32 @@
 #page {
 	width:95%;
 	margin:0 auto;
-	
-	h2 {
-		font-size: 40px;
-		line-height: normal;
-	}
-	#pageTitle {
-		font-size: 40px;
-	}
-	
+	overflow: hidden;
+		
 	#user {
 		width: 100%;
 		text-align: center;
+		position: relative;
+		
+		#pageTitle {
+			font-size: 40px;
+			padding: 10px;
+			margin: 0;
+		}
+		
+		a {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 	
-	#userTeam {
+	#userList {
 		overflow: hidden;
-		background-color: #1B77B2;
 		padding: 10px;
-		border: 1px black solid;
 		width: 47%;
 		float: left;
-			a {
-			color: #FFFD4C;
-			}
-			h3 {
-				color: white;
-				text-decoration: underline;
-			}
-			p {
-				color: Black;
-			}
+			
 			
 			ul {
 				list-style-type: none;
@@ -51,53 +46,9 @@
 				li {
 					text-align: center;
 					padding: 7px;
-					width: inherit;
 					border: 1px black solid;
 					
-					background-color: #FFFD4C;
-					a {
-						color: black;
-					}
-				}
-			}
-		}
-	#userEvent {
-		overflow: hidden;
-		background-color: #1B77B2;
-		padding: 10px;
-		border: 1px black solid;
-		width: 47%;
-		float: right;
-			a {
-			color: #FFFD4C;
-			}
-			h3 {
-				color: white;
-				text-decoration: underline;
-			}
-			p {
-				color: Black;
-			}
-			
-			ul {
-				list-style-type: none;
-				padding-left: 0px;
-				border: 2px black solid;
-				width: 100%;
-				overflow: hidden;
-				
-				.break {
-					background-color: black !important;
-					padding: 0px;
-				}
-				
-				li {
-					text-align: center;
-					padding: 7px;
-					width: inherit;
-					border: 1px black solid;
-					
-					background-color: #FFFD4C;
+					background-color: #1B77B2;
 					a {
 						color: black;
 					}
@@ -107,18 +58,20 @@
 
 	#userInner {
 		position: relative;
-		padding: 10px;
-		border-bottom: 1px black solid;
 		
-		h2 {
+		h3 {
+			font-size: 40px;
+			line-height: normal;
+			color: black;
+			text-align: center;
 			margin: 0px;
 		}
 		
-		h3 {
+		a {
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			margin: 0 0 10px;
+			margin: 0;
 			font-size: 1.0em;
 			text-transform: uppercase;
 		}

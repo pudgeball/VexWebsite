@@ -1,28 +1,64 @@
-<div id="teamDetails">
-<table>
-  <tr>
-    <th><%= t("activerecord.attributes.team.name") %></th>
-    <th><%= t("activerecord.attributes.team.numStudents") %></th>
-    <th><%= t("activerecord.attributes.team.school") %></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @teams.each do |team| %>
-  <tr>
-    <td><%= team.name %></td>
-    <td><%= team.numStudents %></td>
-    <td><%= link_to team.school.name, school_path(team.school) %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+<div id="eventList">
+  <% if @teams.count > 0 %>
+    <ul>
+      <% @teams.each do |team| %>
+        <li>
+          <div id="cell">
+            <p> <%= link_to team.name, team %> </p>
+            <p>Number of Students: <%= team.numStudents %> </p>
+            <p style="float: left !important;">School: <%= team.school.name %> </p>
+          </div>
+        </li>
+      <% end %>
+    <% else %>
+      <div>
+        <p> NO TEAMS YET :( </p>
+      </div>
+    <% end %>
 </div>
 
-<br />
+<!--   
+<table>
+  <tr>
+    <th>< t("activerecord.attributes.team.name") %></th>
+    <th>< t("activerecord.attributes.team.numStudents") %></th>
+    <th>< t("activerecord.attributes.team.school") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<%= link_to 'New Team', new_team_path %>
+< @teams.each do |team| %>
+  <tr>
+    <td>% team.name %></td>
+    <td% team.numStudents %></td>
+    <td% link_to team.school.name, school_path(team.school) %></td>
+  </tr>
+< end %>
+</table>
+-->
+
+<!--
+<div id="eventList">
+  <h2>Upcoming Events</h2>	
+  < if @events.count > 0 %>
+    <ul>
+      < @events.each do |event| %>
+        <li>
+          <div id="cell">
+            <p>< link_to event.name, event %></p>
+            <p>< l event.time, format: :event_cell %></p>
+            <p>Spots Available: < spotsLeft(event) %></p>
+            <p id='region'>Region: < event.region.name %></p>
+            <p>< signUp(event) %></p>
+          </div>
+        </li>
+      < end %>
+    </ul>
+  < else %>
+    <div>
+      <p>NO EVENTS YET :(</p>
+    </div>
+  < end %>
+</div>
+-->

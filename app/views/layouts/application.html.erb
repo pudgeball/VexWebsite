@@ -10,20 +10,22 @@
 </head>
 <body>
   <div id="banner">
-    <div id="logo">
-      <%= link_to image_tag("vexlogo.jpg"), root_path %>
-    </div>
-    <div id="title">
-      <p><%= @page_title || "HDSB: Vex" %></p>
-    </div>
-    <div id="menu">
-      <ul>
-        <%= render("renders/menu") %>
-      </ul>
+    <div class="container">
+      <div id="logo">
+        <%= link_to image_tag("vexlogo.jpg"), root_path %>
+      </div>
+      <div id="title">
+        <p><%= @page_title || "HDSB: Vex" %></p>
+      </div>
+      <div id="menu">
+        <ul>
+          <%= render("renders/menu") %>
+        </ul>
+      </div>
     </div>
   </div>
   <div id="content">
-	  <div>
+	  <div class="container">
 		  <%= yield %>
 	  </div>
   </div>

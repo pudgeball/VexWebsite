@@ -17,10 +17,15 @@
 	height: 150px;
 	background-color: #B21312;
 	
+	> div {
+		padding: 0px;
+	}
+	
 	#logo {
 		width: 20%;
 		float: left;
 		height: inherit;
+		position: absolute;
 		
 		a {
 			text-decoration: none;
@@ -28,13 +33,14 @@
 			img {
 				width: 100%;
 				height: inherit;
+				
 			}
 		}
 	}
 	
 	#title {
 		float: left;
-		width: 80%;
+		width: 100%;
 		
 		p {
 			font-size: 50px;
@@ -48,7 +54,7 @@
 	
 	#menu {
 		float: left;
-		width: 80%;
+		width: 100%;
 		position: relative;
 		height: 50px;
 		
@@ -79,11 +85,6 @@
 	overflow: hidden;
 	margin-top: 20px;
 	
-	> div {
-		padding: 20px;
-		overflow: hidden;
-	}
-	
 	h1 {
 		color: black;
 		text-align: center;
@@ -104,4 +105,9 @@
 	a {
 		color: white;
 	}
+}
+
+.container {
+	padding: 20px;
+	overflow: hidden;
 }

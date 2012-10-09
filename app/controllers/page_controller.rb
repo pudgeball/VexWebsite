@@ -7,7 +7,7 @@ class PageController < ApplicationController
   end
   
   def user    
-    @page_title = current_user.school.name
+    @page_title = "Profile"
     
     @teams = retrieveTeams(current_user.school)
     @events = filterForUpcoming(retrieveEvents(@teams))

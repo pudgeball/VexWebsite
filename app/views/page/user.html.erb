@@ -1,12 +1,16 @@
 <div id="page">
   <div id="user">
-  	<p><span id="pageTitle"><%= current_user.name %></span><%= link_to "Edit Info", edit_user_registration_path(current_user) %> </p>
+  	<p id="pageTitle"><%= current_user.name %></p>
+  	<%= link_to "Edit Info", edit_user_registration_path(current_user) %>
   </div>
-  <div id="userTeam">
+  <hr />
+  <div id="userList">
     <div id="userInner">
-      <h2><%= link_to "My Teams", teams_path %></h2>
-      <h3><%= link_to "Apply", root_path %></h3>
+      <!--<h2><%= link_to "My Teams", teams_path %></h2>-->
+      <h3>My Teams</h3>
+      <%= link_to "Apply", root_path %>
     </div>
+    <hr />
     <% if @teams.count > 0 %>
     <ul>
       <% @teams.each do |team| %>
@@ -23,11 +27,14 @@
     </div>
     <% end %>
   </div>
-  <div id="userEvent">
+  
+  <div id="userList">
     <div id="userInner">
-      <h2><%= link_to "My Events", events_path %></h2>
-      <h3><%= link_to "Sign-Up!", root_path %>
+      <!--<h2><%= link_to "My Events", events_path %></h2>-->
+      <h3>My Events</h3>
+      <%= link_to "Sign-Up!", root_path %>
     </div>
+    <hr />
     <% if @events.count > 0 %>
     <ul>
       <% @events.each do |event| %>
