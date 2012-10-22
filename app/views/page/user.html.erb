@@ -6,9 +6,8 @@
   <hr />
   <div id="userList">
     <div id="userInner">
-      <!--<h2><%= link_to "My Teams", teams_path %></h2>-->
       <h3>My Teams</h3>
-      <%= link_to "Apply", root_path %>
+      <%= link_to "Apply", new_application_path %>
     </div>
     <hr />
     <% if @teams.count > 0 %>
@@ -30,9 +29,8 @@
   
   <div id="userList">
     <div id="userInner">
-      <!--<h2><%= link_to "My Events", events_path %></h2>-->
       <h3>My Events</h3>
-      <%= link_to "Sign-Up!", root_path %>
+      <%= link_to "Sign-Up!", events_path %>
     </div>
     <hr />
     <% if @events.count > 0 %>
