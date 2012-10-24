@@ -13,6 +13,9 @@ ActiveAdmin.register School do
     f.inputs "Details" do
       f.input :region
       f.input :name
+      f.input :city
+      f.input :province, as: :select, collection: [["Ontario", "Ontario"]]
+      f.input :country, as: :select, collection: [["Canada", "Canada"]]
     end
     f.buttons
   end

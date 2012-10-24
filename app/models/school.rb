@@ -1,5 +1,5 @@
 class School < ActiveRecord::Base
-  attr_accessible :name, :region_id
+  attr_accessible :name, :region_id, :city, :province, :country
   
   validates :name, uniqueness: true
   

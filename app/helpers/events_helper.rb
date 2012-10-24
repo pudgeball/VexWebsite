@@ -1,3 +1,5 @@
+require 'csv'
+
 module EventsHelper
   def spotsLeft(event)
     return event.spotsAvailable - event.event_attendees.length
@@ -37,7 +39,18 @@ module EventsHelper
     end
   end
   
-  def getUpcomingEvents()
+  def getUpcomingEvents
     return Event.where("time >= ?", Time.now.beginning_of_day).all
   end
+  
+  def getCSVFile
+    CSV.generate do |csv|
+      @event.event_attendees.each do |attendee|
+        team = Team.find(attendee.team_id)
+        # TeamName, TeamNumber, City, Province or State, Country, Nickname, Sponsor
+        csv << [team.name, team.id, team.school.city, team.school.province, team.school.country, ' ', team.school.name, '']
+      end
+    end
+  end
+  
 end

@@ -18,6 +18,7 @@ class EventsController < ApplicationController
 
   # GET /events/1
   # GET /events/1.json
+  # GET /events/1.csv
   def show
     @event = Event.find(params[:id])
     
@@ -28,6 +29,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }
+      format.csv #{ render :layout => false }
     end
   end
 

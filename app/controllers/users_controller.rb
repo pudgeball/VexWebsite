@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @page_title = "Users"
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to root_path }
       format.json { render json: @users }
     end
   end
