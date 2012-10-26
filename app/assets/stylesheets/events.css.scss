@@ -57,12 +57,13 @@
 	#info {
 		overflow: hidden;
 		background-color: #1B77B2;
-		padding: 10px;
 		border: 1px black solid;
 		
 		#text {
-			width: 50%;
+      padding: 10px 0 10px 10px;
+			width: 49%;
 			float: left;
+      
 			
 			h3 {
 				color: white;
@@ -122,6 +123,9 @@
 		overflow: hidden;
 		
 		.field {
+      padding-left: 10px;
+      padding-right: 10px;
+      
 			label {
 				color: white;
 			}
@@ -131,11 +135,11 @@
 			}
 		}
 		.first {
-			padding: 10px 10px 0 10px;
+			padding-top: 10px;
 		}
 		
 		.last {
-			padding: 0 10px 10px 10px;
+      padding-bottom: 10px;
 		}
 
 		.actions {

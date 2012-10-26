@@ -1,2 +1,4 @@
 <h2>Welcome to the Halton district school board, Vex Robotics site!</h2>
 <p>This is site is dedicated to providing a wonderful experience for you, the users.</p>
+
+<% UserMailer.welcome_email(User.find(:first)).deliver%>

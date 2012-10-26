@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    
+    <style>
+    body {
+      background-color: #1B77B2;
+      font-family: verdana, arial, helvetica, sans-serif; 
+    }
+    
+    #message {
+      background-color: #FFFD4C;
+      margin: 50px;
+    }
+    
+    #content {
+      padding: 0 20px 10px 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      background-color: #B21312;
+      padding: 10px;
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h1>Welcome to the new Vex</h1>
+      <div id="content">
+        <p>We would like to extend an invitation to the new HDSB's Vex website. </br>
+          This site will help you track your teams and the upcoming events.</p>
+
+          <p>Your username for the site is: <b><%= @user.email %></b> & your password is: <i>password</i></p>
+          
+          <p>We <b><i>strongly</i></b> recommend that you change your password.  To do this:</p>
+
+          <ol>
+            <li>Login to your Account</li>
+            <li>Click 'Profile in the top right</li>
+            <li>On the right hand side of the page, beside your name, click 'Edit Info'</li>
+            <li>Type in a new password and hit confirm to update your password</li>
+          </ol>
+
+          <p> The link to login is <a href='<%= @url %>'>located here</a></p>
+
+          </br>
+          <hr />
+          <p> If there anything else that you need or something is wrong, feel free to email me at <a   href="nick@nickmcguire.com">nick@nickmcguire.com</a> </p>
+      </div>
+    </div>
+  </body>
+</html>
