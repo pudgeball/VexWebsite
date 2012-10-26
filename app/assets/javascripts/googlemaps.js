@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var location = $('#location').text();
-	var geoLocation, map;
+	var map;
 	
 	var geoCoder = new google.maps.Geocoder();
 	
@@ -16,8 +16,6 @@ $(document).ready(function() {
 			console.log("GMaps Error: " + status);
 		}
 	});
-	
-	console.log(geoLocation)
 	
 	map = new google.maps.Map(document.getElementById("map"), {
 		center: new google.maps.LatLng(0.0, 0.0),
