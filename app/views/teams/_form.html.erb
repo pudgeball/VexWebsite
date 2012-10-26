@@ -11,20 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field first">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field last">
     <%= f.label :numStudents %><br />
-    <%= f.number_field :numStudents %>
-  </div>
-  <div class="field">
-    <%= f.label :school %><br />
-    <% @items = School.all.collect { |s| [s.name, s.id] } %>
-    <%= select(:team, "school_id", @items) %>
+    <%= f.select :numStudents, (1..50) %>
   </div>
   <div class="actions">
+    <%= f.label :none, "<span><a href='/profile'>Cancel</a></span>".html_safe, class: "AA_Button"  %>
     <%= f.submit %>
   </div>
 <% end %>

@@ -23,8 +23,6 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     
     @page_title = "Event"
-    
-    @isOnEventPage = true
 
     respond_to do |format|
       format.html # show.html.erb

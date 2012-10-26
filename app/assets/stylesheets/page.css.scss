@@ -24,9 +24,13 @@
 		
 		a {
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			right: 0;
 		}
+    
+    p {
+      margin: 0;
+    }
 	}
 	
 	#userList {
@@ -35,6 +39,9 @@
 		width: 47%;
 		float: left;
 			
+      #empty {
+        text-align: center;
+      }
 			
 			ul {
 				list-style-type: none;
@@ -52,11 +59,24 @@
 					text-align: center;
 					padding: 7px;
 					border: 1px black solid;
-					
-					background-color: #1B77B2;
+          background-color: #1B77B2;
+          color: white;
+          position: relative;
+          
+          
 					a {
-						color: black;
+						color: #FFFD4C;
 					}
+          
+          #edit {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          
+          p {
+            margin: 0 0 10px 0;
+          }
 				}
 			}
 		}
@@ -77,7 +97,7 @@
 			right: 0;
 			bottom: 0;
 			margin: 0;
-			font-size: 1.0em;
+			font-size: 14px;
 			text-transform: uppercase;
 		}
 	}

@@ -1,13 +1,13 @@
 <div id="page">
   <div id="user">
-  	<p><span id="pageTitle"><%= current_user.name %></span></p>
+  	<span id="pageTitle"><%= current_user.name %></span>
   	<p><%= link_to "Edit Info", edit_user_registration_path(current_user) %></p>
   </div>
   <hr />
   <div id="userList">
     <div id="userInner">
       <h3>My Teams</h3>
-      <%= link_to "Apply", new_application_path %>
+      <!--<%= link_to "Apply", new_application_path %>-->
     </div>
     <hr />
     <% if @teams.count > 0 %>
@@ -15,14 +15,16 @@
       <% @teams.each do |team| %>
         <li>
           <div id="cell">
-            <p><%= link_to team.name, team %></p>
+            <h4><%= link_to team.name, team %></h4>
+            <p>Number of Students: <%= team.numStudents %></p>
+            <p id="edit"><%= link_to "Edit Team", edit_team_path(team)%></p>
           </div>
         </li>
       <% end %>
     </ul>
     <% else %>
     <div>
-      <p>NO TEAMS YET :(</p>
+      <p id="empty">NO TEAMS YET :(</p>
     </div>
     <% end %>
   </div>
@@ -30,7 +32,7 @@
   <div id="userList">
     <div id="userInner">
       <h3>My Events</h3>
-      <%= link_to "Sign-Up!", events_path %>
+      <!--<%= link_to "Sign-Up!", events_path %>-->
     </div>
     <hr />
     <% if @events.count > 0 %>
@@ -46,7 +48,7 @@
     </ul>
     <% else %>
     <div>
-      <p>NO EVENTS YET :(</p>
+      <p id="empty">NO EVENTS YET :(</p>
     </div>
   <% end %>
   </div>

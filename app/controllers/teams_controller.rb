@@ -17,7 +17,7 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     
-    @page_title = "Team: #{@team.name}"
+    @page_title = "Team"
 
     respond_to do |format|
       format.html # show.html.erb
