@@ -50,4 +50,50 @@
 	}
 }
 
+form.edit_user {
+	margin: 0 auto 0 auto;
+	width: 600px;
+	background-color: #1B77B2;
+	border: 4px solid black;
+		
+	.field {
+		padding: 0 10px 0 10px;
+			
+		label, i {
+			color: white;
+		}
+		input {
+			width: 96%
+		}
+	}
+		
+	.first {
+		padding: 10px 10px 0 10px !important;
+	}
+		
+	.last {
+		padding: 0 10px 10px 10px !important;
+	}
+		
+	.actions {
+		margin-bottom: 0px;
+		background-color: black;
+		padding: 7px;
+		overflow: hidden;
+			
+			
+		input[type="submit"] {
+			float: right;
+		}
+			
+		span {
+			float: left;
+			a {
+				padding-top: 7px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+}
+
 
