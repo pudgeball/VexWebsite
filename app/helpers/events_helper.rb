@@ -45,10 +45,11 @@ module EventsHelper
   
   def getCSVFile
     CSV.generate do |csv|
+      #Number,Name,City,State,Country,Short Name,School,Sponsor
+      csv << ['Number', 'Name', 'City', 'State', 'Country', 'Short Name', 'School', 'Sponsor']
       @event.event_attendees.each do |attendee|
         team = Team.find(attendee.team_id)
-        # TeamName, TeamNumber, City, Province or State, Country, Nickname, Sponsor
-        csv << [team.name, team.id, team.school.city, team.school.province, team.school.country, ' ', team.school.name, '']
+        csv << [team.name, team.id, team.school.city, team.school.province, team.school.country, ' ', team.school.name, ' ']
       end
     end
   end

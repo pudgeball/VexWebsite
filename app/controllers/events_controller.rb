@@ -27,7 +27,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }
-      format.csv #{ render :layout => false }
+      format.csv 
     end
   end
 
