@@ -12,4 +12,10 @@ class UserMailer < ActionMailer::Base
     @url = "http://vex.herokuapp.com/users/sign_in"
     mail(to: user.email, subject: "Welcome to the new way to experience Vex")
   end
+  
+  #Added more teams to a user
+  def added_teams(user)
+    @user = user
+    mail(to: user.email, subject: "More teams have been added to your account!")
+  end
 end
