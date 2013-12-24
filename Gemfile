@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '4.0.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,16 +9,15 @@ group :development do
   gem 'letter_opener'
 end
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
+
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'execjs',       '~> 1.3.2'
+  gem 'coffee-rails'
+  gem 'execjs'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platform => :ruby
@@ -27,10 +26,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-gem 'activeadmin'
-gem "meta_search",    '>= 1.1.0.pre'
-gem 'sass-rails',   '~> 3.2.3'
+gem 'unicorn'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem "meta_search"
+gem 'sass-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
